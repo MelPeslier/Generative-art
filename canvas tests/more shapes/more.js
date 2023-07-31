@@ -73,7 +73,47 @@ function draw() {
       ctx.arc(cornex2, corney -35, 35, Math.PI / 2.8, Math.PI / 4.8 , true);
       
       ctx.stroke();
+
+      // 2 Triangles
+      ctx.beginPath();
+      ctx.moveTo(600, 20);
+      ctx.lineTo(650, 20);
+      ctx.lineTo(600, 70);
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(610, 80);
+      ctx.lineTo(660, 80);
+      ctx.lineTo(660, 30);
+      ctx.closePath();
+      ctx.stroke();
+
+
+      // Differents circles in a for loop
+      for (let i = 0; i < 4; i++){
+         for (let j = 0; j < 4; j++){
+            ctx.beginPath();
+            const x = 25 + j * 50;
+            const y = 200 + i * 50;
+            const radius = 20;
+            const startAngle = 0;
+            const endAngle = Math.PI + (Math.PI * j) / (2 + i * 0.7);
+            const counterclockwise = i % 2 !== 0;
+
+            ctx.arc(x, y, radius, startAngle, endAngle, counterclockwise);
+
+            if (i > 1){
+               ctx.fill();
+            } else {
+               ctx.stroke();
+            }
+         }
+      }
+
+      //
    }
 }
+
+
 
 draw();
