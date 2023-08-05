@@ -1,3 +1,0 @@
-// l'élément canvas est une surface où l'on peut dessiner en utilisant des lignes de code JS
-var canvas = document.querySelector('canvas');
-
