@@ -4,9 +4,21 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Tiled Lines</title>
+   <style src="Tiled Lines.css"></style>
+   <script src="Tiled Lines.js" defer></script>
 </head>
 <body>
-   <canvas id="canvas"></canvas>
-   <script src="Tiled Lines.js"></script>
+   <div id="choix">
+      <label for="art-select">Choose the art style</label>
+   
+      <select name="art-select" id="art-select">
+         <option value="strait-line">strait-line</option>
+         <option value="double-strait-line">double-strait-line</option>
+      </select>
+   
+      <button onclick="generate()">Générer</button>
+   </div>
+
+   <canvas id="canvas" width="600" height="600" border="1px solid black"></canvas>
 </body>
 </html>
